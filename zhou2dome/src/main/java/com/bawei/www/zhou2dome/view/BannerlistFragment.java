@@ -25,8 +25,8 @@ import java.util.List;
 public class BannerlistFragment extends Fragment implements IVew {
 
     private Banner banner_w;
-    private String url = "https://api.tianapi.com/wxnew/?key=c4aa776e0a51d57d6750511e2baa46b6&num=6&page=1";
-    private String path="http://apis.juhe.cn/cook/query?key=9dc74007e90b957d8c63f0a44445b0e4&menu=%E8%A5%BF%E7%BA%A2%E6%9F%BF&rn=10&pn=3";
+    private String url = "http://api.tianapi.com/wxnew/?key=c4aa776e0a51d57d6750511e2baa46b6&num=6&page=1";
+    private String path = "http://apis.juhe.cn/cook/query?key=9dc74007e90b957d8c63f0a44445b0e4&menu=%E8%A5%BF%E7%BA%A2%E6%9F%BF&rn=10&pn=3";
     private IPersonter iPersonter;
     private ListView listitem;
     private MyAdapter md;
@@ -93,10 +93,8 @@ public class BannerlistFragment extends Fragment implements IVew {
             @Override
             public void displayImage(Context context, Object path, ImageView imageView) {
 
-                List<BannerBena.NewslistBean> newslist = bannerBena.getNewslist();
-                for (int i = 0; i < 6; i++) {
-                    com.nostra13.universalimageloader.core.ImageLoader.getInstance().displayImage(newslist.get(i).getPicUrl(), imageView);
-                }
+                BannerBena.NewslistBean newslistBean = (BannerBena.NewslistBean) path;
+                com.nostra13.universalimageloader.core.ImageLoader.getInstance().displayImage(newslistBean.getPicUrl(), imageView);
 
             }
 
