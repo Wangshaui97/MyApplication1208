@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MainActivity">
+
+    <EditText
+        android:id="@+id/putinname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入用户名"
+        />
+
+    <EditText
+        android:id="@+id/putinpwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入用户密码"
+        app:layout_constraintTop_toBottomOf="@id/putinname"/>
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/putinpwd"
+        android:text="登录"
+        />
+    <Button
+        android:id="@+id/otherlogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/login"
+        android:text="注册"
+        />
+    <Button
+        android:id="@+id/threelogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/otherlogin"
+        android:text="第三方QQ登录"
+        />
+
+</android.support.constraint.ConstraintLayout>
